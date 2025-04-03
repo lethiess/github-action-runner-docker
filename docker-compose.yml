@@ -1,0 +1,17 @@
+services:
+  github-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: github-action-runner
+    environment:
+      - GITHUB_REPO_URL=https://github.com/username/repository
+      - RUNNER_TOKEN=your_runner_token
+      - RUNNER_NAME=compose-runner
+    volumes:
+      - runner-data:/home/runner/_work
+    restart: unless-stopped
+# uncomment to add custom host mappings
+#    extra_hosts:
+#      - "example.local:192.168.1.100"
+#      - "api.example.local:192.168.1.101"
