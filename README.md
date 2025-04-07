@@ -29,7 +29,7 @@ Run a GitHub Action runner in a Docker container instead of installing it locall
 docker run -d --name github-action-runner \
   -e GITHUB_REPO_URL="https://github.com/username/repository" \
   -e RUNNER_TOKEN="YOUR_RUNNER_TOKEN" \
-  -e RUNNER_NAME="custom-runner-name" \
+  -e RUNNER_NAME="your-runner-name" \
   github-action-runner
 ```
 
